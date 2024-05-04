@@ -13,17 +13,24 @@ void main() {
       darkTheme: ThemeData.dark().copyWith(
         brightness: Brightness.dark,
         colorScheme: kDarkColorScheme,
+        dropdownMenuTheme: DropdownMenuThemeData().copyWith(),
+        bottomSheetTheme: const BottomSheetThemeData()
+            .copyWith(backgroundColor: kDarkColorScheme.onPrimaryContainer),
+        inputDecorationTheme: const InputDecorationTheme()
+            .copyWith(labelStyle: const TextStyle(color: Colors.white60)),
         cardTheme: const CardTheme().copyWith(
           color: kDarkColorScheme.secondaryContainer,
           margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         ),
         textTheme: ThemeData().textTheme.copyWith(
-              titleLarge: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: kDarkColorScheme.onSecondaryContainer,
-                  fontSize: 16),
-            ),
-        iconTheme: const IconThemeData().copyWith(color: Colors.black),
+            titleLarge: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: kDarkColorScheme.onSecondaryContainer,
+                fontSize: 16),
+            titleMedium: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: kDarkColorScheme.onPrimaryContainer,
+            )),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
               backgroundColor: kDarkColorScheme.primaryContainer,
@@ -54,6 +61,7 @@ void main() {
             ),
       ),
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
       home: const Expenses(),
     ),
   );
