@@ -117,6 +117,11 @@ class _NewExpenseState extends State<NewExpense> {
                           : formatter.format(
                               _selectedDate!,
                             ),
+                      style: TextStyle(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white70
+                            : Colors.black87,
+                      ),
                     ),
                     Expanded(
                       child: IconButton(
