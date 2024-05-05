@@ -83,6 +83,11 @@ class _NewExpenseState extends State<NewExpense> {
       child: Column(
         children: [
           TextField(
+            style: TextStyle(
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
+            ),
             controller: _titleController,
             maxLength: 50,
             decoration: const InputDecoration(
@@ -95,6 +100,11 @@ class _NewExpenseState extends State<NewExpense> {
             children: [
               Expanded(
                 child: TextField(
+                  style: TextStyle(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
+                  ),
                   controller: _amountController,
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(

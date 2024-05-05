@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mela_tracker/models/expense.dart';
+import 'package:mela_tracker/widgets/chart/chart.dart';
 import 'package:mela_tracker/widgets/expense_list/expense_list.dart';
 import 'package:mela_tracker/widgets/new_expense.dart';
 
@@ -78,7 +79,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text('chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(child: mainContent),
         ],
       ),

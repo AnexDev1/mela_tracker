@@ -16,8 +16,9 @@ void main() {
         dropdownMenuTheme: DropdownMenuThemeData().copyWith(),
         bottomSheetTheme: const BottomSheetThemeData()
             .copyWith(backgroundColor: kDarkColorScheme.onPrimaryContainer),
-        inputDecorationTheme: const InputDecorationTheme()
-            .copyWith(labelStyle: const TextStyle(color: Colors.white60)),
+        inputDecorationTheme: const InputDecorationTheme().copyWith(
+          labelStyle: const TextStyle(color: Colors.white60),
+        ),
         cardTheme: const CardTheme().copyWith(
           color: kDarkColorScheme.secondaryContainer,
           margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -61,7 +62,7 @@ void main() {
             ),
       ),
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       home: const Expenses(),
     ),
   );
