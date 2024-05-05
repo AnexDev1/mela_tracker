@@ -14,7 +14,7 @@ class ChartBar extends StatelessWidget {
         MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 6),
         child: FractionallySizedBox(
           heightFactor: fill,
           child: DecoratedBox(

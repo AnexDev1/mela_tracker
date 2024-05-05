@@ -30,7 +30,16 @@ class Expense {
   final Category category;
 
   String get formattedDate {
-    return formatter.format(date);
+    final today = DateTime.now();
+    final yesterday = today.subtract(const Duration(days: 1));
+
+    if (date.day == today.day) {
+      return "Today";
+    } else if (date.day == yesterday.day) {
+      return "Yesterday";
+    } else {
+      return formatter.format(date); // Use default formatting for other dates
+    }
   }
 }
 

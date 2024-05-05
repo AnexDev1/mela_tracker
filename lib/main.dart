@@ -62,7 +62,7 @@ void main() {
             ),
       ),
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.light,
       home: const Expenses(),
     ),
   );
