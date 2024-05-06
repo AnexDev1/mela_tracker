@@ -13,7 +13,7 @@ void main() {
       darkTheme: ThemeData.dark().copyWith(
         brightness: Brightness.dark,
         colorScheme: kDarkColorScheme,
-        dropdownMenuTheme: DropdownMenuThemeData().copyWith(),
+        dropdownMenuTheme: const DropdownMenuThemeData().copyWith(),
         bottomSheetTheme: const BottomSheetThemeData()
             .copyWith(backgroundColor: kDarkColorScheme.onPrimaryContainer),
         inputDecorationTheme: const InputDecorationTheme().copyWith(
